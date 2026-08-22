@@ -109,13 +109,13 @@ class Inline:
             ]
         else:
             rows = [
-                [self.ikb(text=f"{lang['add_me']}", url=f"https://t.me/{app.username}?startgroup=true", style=ButtonStyle.PRIMARY)],
-                [self.ikb(text=f"{lang['help']}", callback_data="help", style=ButtonStyle.DANGER)],
+                [self.ikb(text=f"{lang['add_me']}", url=f"https://t.me/{app.username}?startgroup=true", style=ButtonStyle.PRIMARY,icon_custom_emoji_id="6183677764256666403")],
+                [self.ikb(text=f"{lang['help']}", callback_data="help", style=ButtonStyle.DANGER, icon_custom_emoji_id="5384466886857614542")],
                 [
-                    self.ikb(text=f"{lang['support']}", url=config.SUPPORT_CHAT, style=ButtonStyle.SUCCESS),
-                    self.ikb(text=f"{lang['channel']}", url=config.SUPPORT_CHANNEL, style=ButtonStyle.SUCCESS),
+                    self.ikb(text=f"{lang['support']}", url=config.SUPPORT_CHAT, style=ButtonStyle.SUCCESS, icon_custom_emoji_id="6208548360794677149"),
+                    self.ikb(text=f"{lang['channel']}", url=config.SUPPORT_CHANNEL, style=ButtonStyle.SUCCESS,icon_custom_emoji_id="6208548360794677149"),
                 ],
-                [self.ikb(text=f"{lang['source']}", user_id=config.OWNER_ID, style=ButtonStyle.PRIMARY)],
+                [self.ikb(text=f"{lang['source']}", user_id=config.OWNER_ID, style=ButtonStyle.PRIMARY, icon_custom_emoji_id="6208694634495876948"),
             ]
         return self.ikm(rows)
 
