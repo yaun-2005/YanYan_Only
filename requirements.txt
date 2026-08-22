@@ -1,4 +1,4 @@
-aiohttp~=3.13.3
+Aiohttp~=3.13.3
 kurigram>=2.2.17
 pillow~=12.1.0
 psutil~=7.2.1
@@ -8,3 +8,4 @@ py-tgcalls~=2.2.10
 yt-search-python
 python-dotenv~=1.2.1
 yt-dlp[default]>=2026.3.13
+py-yt
