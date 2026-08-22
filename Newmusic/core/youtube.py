@@ -11,7 +11,8 @@ import asyncio
 import aiohttp
 from pathlib import Path
 
-from py_yt import Playlist, VideosSearch
+from youtubesearchpython.__future__ import Playlist, VideosSearch
+
 
 from anony import logger
 from anony.helpers import Track, utils
