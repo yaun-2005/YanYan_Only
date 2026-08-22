@@ -58,7 +58,7 @@ class Thumbnail:
             # 1. Background
             bg = ImageOps.fit(raw_cover, self.size, method=Image.Resampling.BOX)
             bg = bg.filter(ImageFilter.GaussianBlur(20)) 
-            bg = ImageEnhance.Brightness(bg).enhance(0.5) # နည်းနည်းပိုမှောင်လိုက်သည်
+            bg = ImageEnhance.Brightness(bg).enhance(0.5) 
             draw = ImageDraw.Draw(bg)
 
             # 2. Album Cover with White Border
@@ -80,11 +80,11 @@ class Thumbnail:
             bg.paste(border_bg, (cx, cy), border_bg)
 
             # 3. Contact Text
-            contact = "If you want to create your own music bot, please contact @HEX_KING9"
+            contact = "If you want to create your own music bot, please contact "
             draw.text((self.size[0]//2, 45), contact, font=self.font_small, fill="white", anchor="ma")
 
-            # 4. Text & Info (ကျော်ထွက်ခြင်းကို ပြင်ဆင်ထားသော အပိုင်း)
-            tx_start = 660 # စာသားစတင်မည့်နေရာကို ဘယ်ဘက်သို့ တိုးလိုက်သည်
+            
+            tx_start = 660 
             
             draw.text((tx_start, 160), "Now Playing", font=self.font_info, fill=(255, 200, 50))
             
@@ -112,7 +112,7 @@ class Thumbnail:
             draw.text((tx_start + 400, ctrl_y), "»", font=self.font_title, fill="white", anchor="ma")
 
             # 8. Bottom Credit
-            draw.text((self.size[0]//2, self.size[1] - 45), "Credit by @HANTHAR999", font=self.font_credit, fill=(255, 255, 255, 180), anchor="ma")
+            draw.text((self.size[0]//2, self.size[1] - 45), "DEV", font=self.font_credit, fill=(255, 255, 255, 180), anchor="ma")
 
             bg.save(output, "PNG")
             return output
