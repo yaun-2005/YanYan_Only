@@ -119,6 +119,7 @@ class Inline:
                     self.ikb(text=f"{lang['source']}", user_id=config.OWNER_ID, style=ButtonStyle.PRIMARY, icon_custom_emoji_id="6208694634495876948"),
                     self.ikb(text=f"𝑪𝒓𝒂𝒕𝒆𝒓", url="https://t.me/LeyoxYan_Yan", style=ButtonStyle.PRIMARY,icon_custom_emoji_id="6185994856163185048"),
                 ]
+            ]
         return self.ikm(rows)
 
     def yt_key(self, link: str) -> types.InlineKeyboardMarkup:
